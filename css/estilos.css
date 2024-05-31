@@ -1,0 +1,388 @@
+@charset "utf-8";
+
+
+/* handlee     describirla: font-family: "Handlee", italics; font-weight: 400; font style: normal;*/
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,600;1,600&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap ');
+
+
+
+/* Montserrat light 300  describirla:  font-family: "Montserrat", sans-serif; tamaño-óptico-de-fuente: automático; peso de fuente: 300; estilo de fuente: normal;*/
+
+
+
+/* montserrat regular 400    describirla : font-family: "Montserrat", sans-serif; optical-font-size: auto; font-weight: 400; font style: normal;*/
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital@0;1&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap'); 
+
+/* montserrat regular 500* para desscribirla: font-family: "Montserrat", sans-serif; optical-font-size: auto; font-weight: 500; font style: normal;*/
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,500;1,500&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap '); 
+
+/* montserrat regular 600* SEMIBOLD para desscribirla: font-family: "Montserrat", sans-serif; optical-font-size: auto; font-weight: 600; font style: normal; */
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,600;1,600&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap ');
+
+/* montserrat regular 700* BOLDpara desscribirla: font-family: "Montserrat", sans-serif; tamaño-óptico-de-fuente: automático; peso de fuente: 700; estilo de fuente: normal; */
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,700;1,700&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap ');
+
+
+
+
+*{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+    }
+    img{
+        max-width: 100%;
+    
+
+    }
+    
+    #logo{
+        width: 70%;}
+
+     
+
+    header{
+      font-family: "Handlee", italics; 
+      font-weight: 400; 
+      font style: normal;
+      background-color: #8a2be2;
+
+    
+       
+    }
+
+  
+
+#logo img{ border-radius: 100%;}
+
+
+    
+
+
+
+main {
+  font-family: "Montserrat", sans-serif; optical-font-size: auto; font-weight: 400; font style: normal;
+    padding: 1em;
+    min-height: 100vh;
+  }
+
+.arbol{
+  font-family:  "Montserrat", sans-serif; optical-font-size: auto; font-weight: 600; font style: normal;
+}
+
+.sustentable{
+  font-family: "Montserrat", sans-serif; optical-font-size: auto; font-weight: 600; font style: normal;
+}
+
+.gestionerror{
+  font-family: "Montserrat", sans-serif; optical-font-size: auto; font-weight: 600; font style: normal;
+}
+.agilidad{
+  font-family:"Montserrat", sans-serif; optical-font-size: auto; font-weight: 600; font style: normal;
+}
+
+
+    .h1{font-family: font-family: "Montserrat", sans-serif; optical-font-size: auto; font-weight: 600; font style: normal;
+
+    }
+
+    .figcaption{ font-family: "Montserrat", sans-serif; optical-font-size: auto; font-weight: 500; font style: normal;
+
+    }
+
+     .index{color: #8a2be2;
+
+     }
+
+      .botoncontactame {
+        color: beige;
+        background-color: indigo;
+
+      }
+
+
+    
+
+
+
+/* aca tengo dudas de como aplicar el gri, si a cada div o a todo el contenedor mmis trabajos*/
+.mistrabajos{
+  display: grid;
+}
+
+
+
+footer {
+  background-color: rgb(224, 214, 73);
+  color:indigo;
+width: 100%; 
+   margin-inline: auto;
+   padding: 1rem; 
+ }
+
+
+header {
+    box-shadow: 0 4px 2px hsl(0 0% 0% / 0.25);
+    position: sticky;
+    top: 0;
+    z-index: 8000;}
+
+    
+
+        #logo {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 9999;}
+
+
+            #logo img {width: 10em;
+                margin: -1em .75em -1em 0;}
+
+
+/* "botón hamburguesa" */
+.menu-btn {
+  cursor: pointer;
+  transition: all 0.3s ease-out; /* anima al hover*/
+  /* "fijo no scrolea", no genera scrol*/
+  position: fixed;
+  /* emplazamiento 1 renglón del borde superior*/
+  top: 1em;
+   /* emplazamiento 1 renglón del borde derecho*/
+   right: 1em;
+   /* en capa superior, casi arriba de todo*/
+   z-index: 9000;   /* es la profundidad*/
+
+}
+               
+/* menú propiamente dicho */
+nav ul {
+  background-color: indigo;
+  display: grid;
+  place-items: center;
+  place-content: center;
+
+  /* sale del fondo, queda fijo */
+  position: fixed;
+  /* emplazamiento,
+  estirado en toda la ventana */
+  inset: 0;
+  /* capa superior, arriba de casi todo */
+  z-index: 8000;
+  /* escondido "a la derecha" */
+  translate: 100%;
+  
+  transition: all .6s ease; /* anima cuando "nav" NO tiene la clase "menuVisible" */
+}
+
+/* el menu cuando "nav" tiene la clase "menuVisible" */
+.menuVisible ul {
+  background-color: indigo;
+  transition: all .4s ease; /* anima cuando "nav" tiene la clase "menuVisible" */
+  
+  /* se muestra */
+  translate: 0;
+}
+
+/* cada vínculo del menu */
+nav ul li a {
+  border-bottom: solid 3px hsl(0 0% 100% / 0.1);
+  color: white;
+  display: block;
+  font-size: 1.5rem;
+  margin-block-end: .5rem;
+  width: min(70vw, 20rem); /* el valor menor entre el 40% del ancho de la ventana del navegador y 240px */
+  text-align: center;
+  
+  padding: .5rem;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  border-bottom: solid 3px hsl(0 0% 100% / 0.5);
+  transition: all .3s;
+}
+
+
+
+
+
+
+
+/*FORMULARIO*/
+.contacto {
+  padding: 3rem 0;
+}
+.contacto h2 {
+  text-align: center;
+}
+.formulario {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.formulario-campo {
+  width: 100%;
+  padding: 0.5rem;
+}
+.contenedor-campo {
+  margin-bottom: 1rem;
+}
+.contenedor-campo textarea {
+  resize: none;
+  height: 200px;
+}
+
+.formulario-boton input {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: indigo;
+  color: white;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+
+
+
+
+/* CSS para dispositivos móviles */
+.trabajo {
+  width: 100%; /* Ocupar todo el ancho disponible */
+  margin-bottom: 20px; /* Espacio entre los trabajos */
+}
+
+/* Estilo adicional para las imágenes */
+.trabajo img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+.contenedor-flex {
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 20px; 
+} 
+
+
+
+
+
+
+/* CSS para dispositivos móviles */
+.trabajo {
+  width: 100%;
+  /* Ocupar todo el ancho disponible */
+  margin-bottom: 20px;
+  /* Espacio entre los trabajos */
+}
+
+/* Estilo adicional para las imágenes */
+.trabajo img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS para tablets */
+@media (min-width: 40em) {
+  .trabajo {
+    flex: 1 0 calc(50% - 20px);
+    /* Dos columnas */
+    max-width: calc(50% - 20px);
+  }
+
+
+/* el menÃº deja de ser fijo */
+header nav {
+  /* para que estÃ© en capa superior pero que no parezca */
+  position: relative;
+}
+
+#logo{
+  width: 6em;
+}
+  
+/* botÃ³n "hamburguesa" oculto */
+.menu-btn {
+  display: none;
+}
+
+/* menu visible */
+header nav ul,
+header .menuVisible ul {
+  /* caja flexible para menu horizontal*/
+  display: flex;
+  /* separaciÃ³n entre sus elementos */
+  gap: .25em;
+
+  /* para que estÃ© en capa superior pero que no parezca */
+  position: relative;
+
+  /* elimina desplazamiento */
+  translate: 0;
+
+  /* elimina fondo */
+  background-color: unset;
+}
+  
+/* items de lista  que contienen los vÃ­nculos del menu */
+header nav ul li {
+  min-width: 4em; /* que no midan menos de: */
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS para escritorio */
+@media (min-width: 60em) {
+  .contenedor-flex{
+    justify-content: space-evenly;
+  }
+  .trabajo {
+    flex: 1 1 calc(33% - 20px);
+  }
+
+  
+
+ 
+
+
+
+}
+
+
+
+
+
